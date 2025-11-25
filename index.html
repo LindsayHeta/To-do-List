@@ -7,16 +7,15 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
-    <h1>📝 Ma Liste de Tâches</h1>
-    
-    <div class="input-section">
-      <input type="text" id="taskInput" placeholder="Ajouter une nouvelle tâche...">
-      <button id="addBtn">Ajouter</button>
-    </div>
-
-    <ul id="taskList"></ul>
+  <h1 class="main-title">⚔️ League of Tâches</h1>
+  
+  <div class="add-section">
+    <input type="text" id="sectionInput" placeholder="Nom de la section...">
+    <input type="text" id="imageInput" placeholder="URL image (optionnel)...">
+    <button id="addSectionBtn">+ Ajouter une tâche</button>
   </div>
+
+  <div class="board" id="board"></div>
 
   <script src="script.js"></script>
 </body>
