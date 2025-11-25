@@ -1,4 +1,6 @@
-@import url('https://fonts.cdnfonts.com/css/beaufort-for-lol');
+
+
+  @import url('https://fonts.cdnfonts.com/css/beaufort-for-lol');
 
 * {
   margin: 0;
@@ -8,7 +10,7 @@
 
 body {
   font-family: 'Beaufort for LOL', 'Segoe UI', serif;
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://th.bing.com/th/id/R.df961270a1770097a17df3d89c41b176?rik=Skm7Nt5dHQgO9Q&pid=ImgRaw&r=0');
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://th.bing.com/th/id/R.df961270a1770097a17df3d89c41b176?rik=Skm7Nt5dHQgO9Q&pid=ImgRaw&r');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -77,9 +79,10 @@ body {
 
 .board {
   display: flex;
+  flex-wrap: wrap;
   gap: 20px;
-  overflow-x: auto;
   padding-bottom: 20px;
+  justify-content: center;
 }
 
 .section {
@@ -215,3 +218,4 @@ body {
   background: #8b0000;
   box-shadow: 0 0 10px rgba(192, 57, 43, 0.7);
 }
+
