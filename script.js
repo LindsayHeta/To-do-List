@@ -129,11 +129,9 @@ function deleteTask(sectionIndex, taskIndex) {
 
 // Supprimer une section
 function deleteSection(sectionIndex) {
-  if (confirm('Supprimer cette section et toutes ses tâches ?')) {
-    sections.splice(sectionIndex, 1);
-    saveSections();
-    displaySections();
-  }
+  sections.splice(sectionIndex, 1);
+  saveSections();
+  displaySections();
 }
 
 // Événements

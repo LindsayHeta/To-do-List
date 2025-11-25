@@ -8,12 +8,18 @@
 
 body {
   font-family: 'Beaufort for LOL', 'Segoe UI', serif;
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://th.bing.com/th/id/R.df961270a1770097a17df3d89c41b176?rik=Skm7Nt5dHQgO9Q&pid=ImgRaw&r=0');
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://th.bing.com/th/id/R.df961270a1770097a17df3d89c41b176?rik=Skm7Nt5dHQgO9Q&pid=ImgRaw&r=0');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   min-height: 100vh;
   padding: 20px;
+  animation: backgroundPulse 3s ease-in-out infinite alternate;
+}
+
+@keyframes backgroundPulse {
+  from { filter: brightness(0.9); }
+  to { filter: brightness(1.1); }
 }
 
 .main-title {
@@ -33,6 +39,12 @@ body {
     6px 6px 0 #6e5019,
     7px 7px 10px rgba(0, 0, 0, 0.8),
     0 0 20px rgba(200, 155, 60, 0.5);
+  animation: titleGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes titleGlow {
+  from { text-shadow: 1px 1px 0 #c89b3c, 2px 2px 0 #c89b3c, 3px 3px 0 #c89b3c, 4px 4px 0 #a67c2f, 5px 5px 0 #8b6624, 6px 6px 0 #6e5019, 7px 7px 10px rgba(0, 0, 0, 0.8), 0 0 20px rgba(200, 155, 60, 0.5); }
+  to { text-shadow: 1px 1px 0 #c89b3c, 2px 2px 0 #c89b3c, 3px 3px 0 #c89b3c, 4px 4px 0 #a67c2f, 5px 5px 0 #8b6624, 6px 6px 0 #6e5019, 7px 7px 10px rgba(0, 0, 0, 0.8), 0 0 40px rgba(200, 155, 60, 0.9); }
 }
 
 .add-section {
@@ -77,9 +89,11 @@ body {
 
 .board {
   display: flex;
+  flex-wrap: wrap;
   gap: 20px;
-  overflow-x: auto;
   padding-bottom: 20px;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 .section {
@@ -91,6 +105,12 @@ body {
   max-width: 300px;
   box-shadow: 0 5px 20px rgba(200, 155, 60, 0.3);
   overflow: hidden;
+  transition: all 0.3s;
+}
+
+.section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(200, 155, 60, 0.6);
 }
 
 .section-image {
